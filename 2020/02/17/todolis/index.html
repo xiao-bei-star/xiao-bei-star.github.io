@@ -14,15 +14,15 @@
 <meta name="author" content="xiaobei" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="小北崛起">
-<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;index.html">
+<meta name="description" content="ToDoList 		 		 	 	 		 			 				 					Todolist 					 				 			 		 		 			进行中 			 			 			已完成  			 			 		           		 			 &amp;copy;  删除全部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="todolis">
+<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;2020&#x2F;02&#x2F;17&#x2F;todolis&#x2F;index.html">
 <meta property="og:site_name" content="小北崛起">
+<meta property="og:description" content="ToDoList 		 		 	 	 		 			 				 					Todolist 					 				 			 		 		 			进行中 			 			 			已完成  			 			 		           		 			 &amp;copy;  删除全部">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-17T09:22:41.679Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -51,13 +51,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>小北崛起</title>
+<title>todolis | 小北崛起</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,8 +64,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -257,102 +255,7 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-2.17" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/02/17/2.17/" class="article-date">
-      <time datetime="2020-02-17T08:25:39.964Z" itemprop="datePublished">2020-02-17</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/17/2.17/">About git study</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="基础的上传方式"><a href="#基础的上传方式" class="headerlink" title="基础的上传方式"></a>基础的上传方式</h2><ol>
-<li><p>先建立一个空文件夹code来clone GitHub博客</p>
-</li>
-<li><p>clone后的结果是所有GitHub上内容都显现出来，然后复制要上传的文件在code文件中</p>
-</li>
-<li><p>git status命令可以查看文件处于工作区（红色），暂存区（绿色），历史区（显示无操作）</p>
-<ul>
-<li>git add.(-A)对文件进行工作区到暂存区转移，git commit -m“解释说明” 对文件暂存区向历史区上传</li>
-<li>git reset+地址可以恢复之前的操作版本内容</li>
-<li>git log是对所有的操作版本进行查看  </li>
-<li>git diff&lt; id1 &gt;&lt; id2 &gt;比较当前两个文档之间的区别  </li>
-</ul>
-</li>
-<li><p>最后git push命令使得历史区push到GitHub上面  </p>
-</li>
-</ol>
-<h2 id="遇到的问题以及解决过程"><a href="#遇到的问题以及解决过程" class="headerlink" title="遇到的问题以及解决过程"></a>遇到的问题以及解决过程</h2><ol>
-<li>clone地址的问题<ul>
-<li>关于clone链接问题:在一次clone地址选取的是HTTP链接，存在一个merge冲突问题，在第二次再次上传过程中使用SSH链接就解决了这个问题</li>
-</ul>
-</li>
-</ol>
-<p><img src="D:%5C%E5%81%87%E6%9C%9F%E5%AD%A6%E4%B9%A0%5C%E6%88%AA%E5%9B%BE&%E5%88%87%E5%9B%BE%5C217.png" alt="merge冲突操作" title="merge冲突操作"></p>
-<ul>
-<li><p>代码在GitHub上面成功上传后但在网页上无法显示（考虑到是否没有将项目放到博客上去）</p>
-</li>
-<li><p>注：昨天使用的方法是在网页中显示了但无法上传到GitHub上</p>
-<ol start="2">
-<li>经过请教学习了解到可以通过一下方法实现上传</li>
-</ol>
-</li>
-<li><p>打包成一个文件夹放在post新建文件中（存在解决渲染的问题）</p>
-</li>
-<li><p>skip_render:+文件名称避免渲染</p>
-</li>
-<li><p>然后在post下面git bash here上传就好啦</p>
-</li>
-</ul>
-<h3 id="git学习总结"><a href="#git学习总结" class="headerlink" title="git学习总结"></a>git学习总结</h3>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-todolis" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-todolis" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2020/02/17/todolis/" class="article-date">
@@ -370,12 +273,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/17/todolis/">todolis</a>
+    <h1 class="article-title" itemprop="name">
+      todolis
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -420,163 +330,91 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-1.26" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/01/26/1.26/" class="article-date">
-      <time datetime="2020-01-26T15:33:50.306Z" itemprop="datePublished">2020-01-26</time>
-</a>
-
-
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2020/02/17/todolis/">todolis</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">xiaobei</a></p>
+        <p><span>Created:</span>2020-02-17, 16:14:11</p>
+        <p><span>Updated:</span>2020-02-17, 17:22:41</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2020/02/17/todolis/" title="todolis">http://superxiaobei.club/2020/02/17/todolis/</a>
+            <span class="copy-path" data-clipboard-text="From http://superxiaobei.club/2020/02/17/todolis/　　By xiaobei" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
     </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+
+
+
+    <nav id="article-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/26/1.26/">Simply record your daily routine</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="About-life"><a href="#About-life" class="headerlink" title="About life"></a>About life</h2><ol>
-<li><p>The number of new cases is still growing,and every morning we see it again.</p>
-</li>
-<li><p>Family people stay at home every day in a trance,really is bored to begin to study.</p>
-</li>
-<li><p>Anyway,the holidays are the best way to catch uo and reduce the gap,trying to do something change myself.</p>
-</li>
-<li><p>In order to reinforce this blog post,using a variety of tools.</p>
-</li>
-</ol>
-<p>[病情发展]：(<a href="https://news.sina.com.cn/c/2020-01-09/doc-iihnzhha1353147.shtml" target="_blank" rel="noopener">https://news.sina.com.cn/c/2020-01-09/doc-iihnzhha1353147.shtml</a> “武汉加油”)<br>2020 new begining things</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/13623636-6d878e3d3ef63825.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="my-logo.png" title="my-logo"></p>
-<hr>
-<h2 id="About-learning"><a href="#About-learning" class="headerlink" title="About learning"></a>About learning</h2><ol>
-<li><p>Need to learn front-end content,catch up with the learning progress</p>
-</li>
-<li><p>DO exercise from tee-code,trying to reinforce the knowledge about C,which is very importance</p>
-</li>
-<li><p>English English English</p>
-</li>
-</ol>
-<h3 id="OVER"><a href="#OVER" class="headerlink" title="OVER"></a>OVER</h3><h4 id="Continue-refueling-tomorrow"><a href="#Continue-refueling-tomorrow" class="headerlink" title="Continue refueling tomorrow"></a>Continue refueling tomorrow</h4>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/12/18/hello-world/" class="article-date">
-      <time datetime="2019-12-18T14:16:15.437Z" itemprop="datePublished">2019-12-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2020/02/17/2.17/">
+                    About git study
+                </a>
+            </div>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/18/hello-world/">Hello World</a>
-    </h1>
-  
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/01/26/1.26/">
+                    Simply record your daily routine
+                </a>
+            </div>
+        
+    </nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">进行中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">已完成 </span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"todolis　| 小北崛起　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
@@ -584,9 +422,35 @@
 
 
 
+    
 
-  
-  
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2020/02/17/2.17/" title="Pre: About git study">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/01/26/1.26/" title="Next: Simply record your daily routine">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/2.17/">About git study</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todolis/">todolis</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/26/1.26/">Simply record your daily routine</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/18/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
