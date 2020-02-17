@@ -15,11 +15,14 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="小北崛起">
-<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;archives&#x2F;2020&#x2F;index.html">
+<meta name="description" content="ToDoList 		 		 	 	 		 			 				 					Todolist 					 				 			 		 		 			进行中 			 			 			已完成  			 			 		           		 			 &amp;copy;  删除全部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="todo&#x2F;todolis">
+<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;2020&#x2F;02&#x2F;17&#x2F;todo&#x2F;todolis&#x2F;index.html">
 <meta property="og:site_name" content="小北崛起">
+<meta property="og:description" content="ToDoList 		 		 	 	 		 			 				 					Todolist 					 				 			 		 		 			进行中 			 			 			已完成  			 			 		           		 			 &amp;copy;  删除全部">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-16T13:53:49.426Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -52,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2020 | 小北崛起</title>
+<title>todo/todolis | 小北崛起</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -62,8 +65,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -252,168 +255,194 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-todo/todolis" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2020/02/17/todo/todolis/" class="article-date">
+      <time datetime="2020-02-17T08:14:11.967Z" itemprop="datePublished">2020-02-17</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      todo/todolis
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/todolis/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.967Z" itemprop="datePublished">02-17</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/todolis/">todo/todolis</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+		<title>ToDoList</title>
+		<meta name="description" content="ToDoList无须注册即可使用，数据存储在用户浏览器的html5本地数据库里，是最简单最安全的待办事项列表应用！" />
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<section>
+				<form action="javascript:postaction()" id="form">
+					<label for="title">Todolist</label>
+					<input type="text" id="title" name="title" placeholder="添加一个ToDo" required="required" autocomplete="off" />
+				</form>
+			</section>
+		</header>
+		<section>
+			<h2 onclick="save()">进行中<span id="todocount"></span></h2>
+			<ol id="todolist" class="demo-box">
+			</ol>
+			<h2>已完成 <span id="donecount"></span></h2>
+			<ul id="donelist">
+			</ul>
+		</section>
+        <!-- <div id="clear">
+    	   <button id="clearbutton"><a href="javascript:clear();><h3>全部清除</h3></a></button>
+        </div> -->
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+		<footer>
+			 &copy;  <a href="javascript:clear();" target="_blank" rel="noopener">删除全部</a>
+		</footer>
+		<script type="text/javascript" src="action.js"></script>
+	</body>
+</html>
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2020/02/17/todo/todolis/">todo/todolis</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">xiaobei</a></p>
+        <p><span>Created:</span>2020-02-17, 16:14:11</p>
+        <p><span>Updated:</span>2020-02-16, 21:53:49</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2020/02/17/todo/todolis/" title="todo/todolis">http://superxiaobei.club/2020/02/17/todo/todolis/</a>
+            <span class="copy-path" data-clipboard-text="From http://superxiaobei.club/2020/02/17/todo/todolis/　　By xiaobei" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/02/17/todo/action/">
+                    todo/action
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/action/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.946Z" itemprop="datePublished">02-17</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">进行中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">已完成 </span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/action/">todo/action</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"todo/todolis　| 小北崛起　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
     
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/style/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.946Z" itemprop="datePublished">02-17</time>
-</a>
+</div>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/style/">todo/style</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/01/26/1.26/" class="archive-article-date">
-      <time datetime="2020-01-26T15:33:50.306Z" itemprop="datePublished">01-26</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/26/1.26/">Simply record your daily routine</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/01/15/kakaka/" class="archive-article-date">
-      <time datetime="2020-01-15T09:12:37.145Z" itemprop="datePublished">01-15</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/kakaka/">new day a hahahha</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/02/17/todo/action/" title="Next: todo/action">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/todolis/">todo/todolis</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/action/">todo/action</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/style/">todo/style</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/26/1.26/">Simply record your daily routine</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/15/kakaka/">new day a hahahha</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/18/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/18/2.17/">About git study</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

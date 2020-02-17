@@ -15,11 +15,14 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="小北崛起">
-<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;archives&#x2F;2020&#x2F;index.html">
+<meta name="description" content="function clear(){ 	localStorage.clear(); 	load(); }  function postaction(){ 	var title &#x3D; document.getElementById(&quot;title&quot;); 	if(title.value &#x3D;&#x3D; &quot;&quot;) { 		alert(&quot;内容不能为空&quot;); 	}else{ 		var data&#x3D;loadData();">
+<meta property="og:type" content="article">
+<meta property="og:title" content="todo&#x2F;action">
+<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;2020&#x2F;02&#x2F;17&#x2F;todo&#x2F;action&#x2F;index.html">
 <meta property="og:site_name" content="小北崛起">
+<meta property="og:description" content="function clear(){ 	localStorage.clear(); 	load(); }  function postaction(){ 	var title &#x3D; document.getElementById(&quot;title&quot;); 	if(title.value &#x3D;&#x3D; &quot;&quot;) { 		alert(&quot;内容不能为空&quot;); 	}else{ 		var data&#x3D;loadData();">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-16T13:53:56.919Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -52,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2020 | 小北崛起</title>
+<title>todo/action | 小北崛起</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -62,8 +65,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -252,168 +255,327 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-todo/action" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2020/02/17/todo/action/" class="article-date">
+      <time datetime="2020-02-17T08:14:11.946Z" itemprop="datePublished">2020-02-17</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      todo/action
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/todolis/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.967Z" itemprop="datePublished">02-17</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/todolis/">todo/todolis</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        function clear(){
+	localStorage.clear();
+	load();
+}
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+function postaction(){
+	var title = document.getElementById("title");
+	if(title.value == "") {
+		alert("内容不能为空");
+	}else{
+		var data=loadData();
+		var todo={"title":title.value,"done":false};
+		data.push(todo);
+		saveData(data);
+		var form=document.getElementById("form");
+		form.reset();
+		load();
+	}
+}
+
+function loadData(){
+	var collection=localStorage.getItem("todo");
+	if(collection!=null){
+		return JSON.parse(collection);
+	}
+	else return [];
+}
+
+function saveSort(){
+	var todolist=document.getElementById("todolist");
+	var donelist=document.getElementById("donelist");
+	var ts=todolist.getElementsByTagName("p");
+	var ds=donelist.getElementsByTagName("p");
+	var data=[];
+	for(i=0;i<ts.length; i++){
+		var todo={"title":ts[i].innerHTML,"done":false};
+		data.unshift(todo);
+	}
+	for(i=0;i<ds.length; i++){
+		var todo={"title":ds[i].innerHTML,"done":true};
+		data.unshift(todo);
+	}
+	saveData(data);
+}
+
+function saveData(data){
+	localStorage.setItem("todo",JSON.stringify(data));
+}
+
+function remove(i){
+	var data=loadData();
+	var todo=data.splice(i,1)[0];
+	saveData(data);
+	load();
+}
+
+function update(i,field,value){
+	var data = loadData();
+	var todo = data.splice(i,1)[0];
+	todo[field] = value;
+	data.splice(i,0,todo);
+	saveData(data);
+	load();
+}
+
+function edit(i)
+{
+	load();
+	var p = document.getElementById("p-"+i);
+	title = p.innerHTML;
+	p.innerHTML="<input id='input-"+i+"' value='"+title+"' />";
+	var input = document.getElementById("input-"+i);
+	input.setSelectionRange(0,input.value.length);
+	input.focus();
+	input.onblur =function(){
+		if(input.value.length == 0){
+			p.innerHTML = title;
+			alert("内容不能为空");
+		}
+		else{
+			update(i,"title",input.value);
+		}
+	};
+}
+
+function load(){
+	var todolist=document.getElementById("todolist");
+	var donelist=document.getElementById("donelist");
+	var collection=localStorage.getItem("todo");
+	if(collection!=null){
+		var data=JSON.parse(collection);
+		var todoCount=0;
+		var doneCount=0;
+		var todoString="";
+		var doneString="";
+		for (var i = data.length - 1; i >= 0; i--) {
+			if(data[i].done){
+				doneString+="<li draggable='true'><input type='checkbox' onchange='update("+i+",\"done\",false)' checked='checked' />"
+				+"<p id='p-"+i+"' onclick='edit("+i+")'>"+data[i].title+"</p>"
+				+"<a href='javascript:remove(" target="_blank" rel="noopener"+i+")'>-</a></li>";
+				doneCount++;
+			}
+			else{
+				todoString+="<li draggable='true'><input type='checkbox' onchange='update("+i+",\"done\",true)' />"
+				+"<p id='p-"+i+"' onclick='edit("+i+")'>"+data[i].title+"</p>"
+				+"<a href='javascript:remove(" target="_blank" rel="noopener"+i+")'>-</a></li>";
+				todoCount++;
+			}
+		};
+		todocount.innerHTML=todoCount;
+		todolist.innerHTML=todoString;
+		donecount.innerHTML=doneCount;
+		donelist.innerHTML=doneString;
+	}
+	else{
+		todocount.innerHTML=0;
+		todolist.innerHTML="";
+		donecount.innerHTML=0;
+		donelist.innerHTML="";
+	}
+
+	var lis=todolist.querySelectorAll('ol li');
+	[].forEach.call(lis, function(li) {
+		li.addEventListener('dragstart', handleDragStart, false);
+		li.addEventListener('dragover', handleDragOver, false);
+		li.addEventListener('drop', handleDrop, false);
+
+		onmouseout =function(){
+			saveSort();
+		};
+	});		
+}
+
+window.onload=load;
+
+window.addEventListener("storage",load,false);
+
+var dragSrcEl = null;
+function handleDragStart(e) {
+  dragSrcEl = this;
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.innerHTML);
+}
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  e.dataTransfer.dropEffect = 'move';
+  return false;
+}
+function handleDrop(e) {
+  if (e.stopPropagation) {
+    e.stopPropagation(); 
+  }
+  if (dragSrcEl != this) {
+    dragSrcEl.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData('text/html');
+  }
+  return false;
+}
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2020/02/17/todo/action/">todo/action</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">xiaobei</a></p>
+        <p><span>Created:</span>2020-02-17, 16:14:11</p>
+        <p><span>Updated:</span>2020-02-16, 21:53:56</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2020/02/17/todo/action/" title="todo/action">http://superxiaobei.club/2020/02/17/todo/action/</a>
+            <span class="copy-path" data-clipboard-text="From http://superxiaobei.club/2020/02/17/todo/action/　　By xiaobei" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2020/02/17/todo/todolis/">
+                    todo/todolis
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/02/17/todo/style/">
+                    todo/style
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/action/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.946Z" itemprop="datePublished">02-17</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/action/">todo/action</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"todo/action　| 小北崛起　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
     
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/style/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.946Z" itemprop="datePublished">02-17</time>
-</a>
+</div>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/style/">todo/style</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/01/26/1.26/" class="archive-article-date">
-      <time datetime="2020-01-26T15:33:50.306Z" itemprop="datePublished">01-26</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/26/1.26/">Simply record your daily routine</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/01/15/kakaka/" class="archive-article-date">
-      <time datetime="2020-01-15T09:12:37.145Z" itemprop="datePublished">01-15</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/kakaka/">new day a hahahha</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2020/02/17/todo/todolis/" title="Pre: todo/todolis">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/02/17/todo/style/" title="Next: todo/style">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/todolis/">todo/todolis</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/action/">todo/action</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/style/">todo/style</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/26/1.26/">Simply record your daily routine</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/15/kakaka/">new day a hahahha</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/18/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/18/2.17/">About git study</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

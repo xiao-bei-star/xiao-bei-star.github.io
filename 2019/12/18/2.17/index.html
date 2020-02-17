@@ -15,11 +15,14 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="小北崛起">
-<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;archives&#x2F;2020&#x2F;index.html">
+<meta name="description" content="基础的上传方式 先建立一个空文件夹code来clone GitHub博客  clone后的结果是所有GitHub上内容都显现出来，然后复制要上传的文件在code文件中  git status命令可以查看文件处于工作区（红色），暂存区（绿色），历史区（显示无操作）  git add.(-A)对文件进行工作区到暂存区转移，git commit -m“解释说明” 对文件暂存区向历史区上传 git res">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About git study">
+<meta property="og:url" content="http:&#x2F;&#x2F;superxiaobei.club&#x2F;2019&#x2F;12&#x2F;18&#x2F;2.17&#x2F;index.html">
 <meta property="og:site_name" content="小北崛起">
+<meta property="og:description" content="基础的上传方式 先建立一个空文件夹code来clone GitHub博客  clone后的结果是所有GitHub上内容都显现出来，然后复制要上传的文件在code文件中  git status命令可以查看文件处于工作区（红色），暂存区（绿色），历史区（显示无操作）  git add.(-A)对文件进行工作区到暂存区转移，git commit -m“解释说明” 对文件暂存区向历史区上传 git res">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-17T08:11:24.420Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -52,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2020 | 小北崛起</title>
+<title>About git study | 小北崛起</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -62,8 +65,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -252,168 +255,194 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2.17" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2019/12/18/2.17/" class="article-date">
+      <time datetime="2019-12-18T14:16:15.421Z" itemprop="datePublished">2019-12-18</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      About git study
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/todolis/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.967Z" itemprop="datePublished">02-17</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/todolis/">todo/todolis</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+        <h2 id="基础的上传方式"><a href="#基础的上传方式" class="headerlink" title="基础的上传方式"></a>基础的上传方式</h2><ol>
+<li><p>先建立一个空文件夹code来clone GitHub博客</p>
+</li>
+<li><p>clone后的结果是所有GitHub上内容都显现出来，然后复制要上传的文件在code文件中</p>
+</li>
+<li><p>git status命令可以查看文件处于工作区（红色），暂存区（绿色），历史区（显示无操作）</p>
+<ul>
+<li>git add.(-A)对文件进行工作区到暂存区转移，git commit -m“解释说明” 对文件暂存区向历史区上传</li>
+<li>git reset+地址可以恢复之前的操作版本内容</li>
+<li>git log是对所有的操作版本进行查看  </li>
+<li>git diff&lt; id1 &gt;&lt; id2 &gt;比较当前两个文档之间的区别  </li>
+</ul>
+</li>
+<li><p>最后git push命令使得历史区push到GitHub上面  </p>
+</li>
+</ol>
+<h2 id="遇到的问题以及解决过程"><a href="#遇到的问题以及解决过程" class="headerlink" title="遇到的问题以及解决过程"></a>遇到的问题以及解决过程</h2><ol>
+<li><p>clone地址的问题</p>
+<ul>
+<li>关于clone链接问题:在一次clone地址选取的是HTTP链接，存在一个merge冲突问题，在第二次再次上传过程中使用SSH链接就解决了这个问题<br>[merge冲突操作]： D:\假期学习\截图&amp;切图\217.png “merge冲突操作”<br>![merge冲突操作]</li>
+<li>代码在GitHub上面成功上传后但在网页上无法显示（考虑到是否没有将项目放到博客上去）</li>
+<li>注：昨天使用的方法是在网页中显示了但无法上传到GitHub上</li>
+</ul>
+</li>
+<li><p>经过请教学习了解到可以通过一下方法实现上传</p>
+<ul>
+<li><p>打包成一个文件夹放在post新建文件中（存在解决渲染的问题）</p>
+</li>
+<li><p>skip_render:+文件名称避免渲染</p>
+</li>
+<li><p>然后在post下面git bash here上传就好啦</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="git学习总结"><a href="#git学习总结" class="headerlink" title="git学习总结"></a>git学习总结</h3>
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2019/12/18/2.17/">About git study</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">xiaobei</a></p>
+        <p><span>Created:</span>2019-12-18, 22:16:15</p>
+        <p><span>Updated:</span>2020-02-17, 16:11:24</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2019/12/18/2.17/" title="About git study">http://superxiaobei.club/2019/12/18/2.17/</a>
+            <span class="copy-path" data-clipboard-text="From http://superxiaobei.club/2019/12/18/2.17/　　By xiaobei" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2019/12/18/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/action/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.946Z" itemprop="datePublished">02-17</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础的上传方式"><span class="toc-number">1.</span> <span class="toc-text">基础的上传方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题以及解决过程"><span class="toc-number">2.</span> <span class="toc-text">遇到的问题以及解决过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#git学习总结"><span class="toc-number">2.1.</span> <span class="toc-text">git学习总结</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/action/">todo/action</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"About git study　| 小北崛起　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
     
+
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/02/17/todo/style/" class="archive-article-date">
-      <time datetime="2020-02-17T08:14:11.946Z" itemprop="datePublished">02-17</time>
-</a>
+</div>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/17/todo/style/">todo/style</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/01/26/1.26/" class="archive-article-date">
-      <time datetime="2020-01-26T15:33:50.306Z" itemprop="datePublished">01-26</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/26/1.26/">Simply record your daily routine</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2020/01/15/kakaka/" class="archive-article-date">
-      <time datetime="2020-01-15T09:12:37.145Z" itemprop="datePublished">01-15</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/kakaka/">new day a hahahha</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2019/12/18/hello-world/" title="Pre: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/todolis/">todo/todolis</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/action/">todo/action</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/17/todo/style/">todo/style</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/26/1.26/">Simply record your daily routine</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/15/kakaka/">new day a hahahha</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/18/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/18/2.17/">About git study</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
